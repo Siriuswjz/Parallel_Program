@@ -60,14 +60,12 @@ void multiply_matrix(double** A, double** B, double** C, int rows, int cols){
         {
             double a = A[i][k];
             double* brow = B[k];
-            double* crow = C[k];
+            double* crow = C[i];
             for(int j = 0; j < cols; j++){
                 crow[j]+= a * brow[j];
             }
         }
-        
     }
-    
 }
 
 int main(){
